@@ -16,8 +16,8 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t udagram-api-feed .
-  - docker tag udagram-api-feed djd4352/udagram-api-feed:latest
+  - docker tag udagram-api-feed djd4352/uda-api-feed:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push djd4352/udagram-api-feed
+  - docker push djd4352/uda-api-feed
