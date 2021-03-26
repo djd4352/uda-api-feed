@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t udagram-api-feed .
+  - docker build -t uda-api-feed .
   - docker tag uda-api-feed djd4352/uda-api-feed:latest
 
 after_success:
